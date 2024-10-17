@@ -1,7 +1,7 @@
 import React from "react";
 import ItemCard from "../item-card";
 import Link from "next/link";
-import { env } from "@/app/utils/env";
+import { env } from "@/utils/env";
 import { items } from "@/data/static";
 
 function ItemsSection() {

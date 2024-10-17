@@ -1,10 +1,16 @@
-import { env } from "@/app/utils/env";
+import { env } from "@/utils/env";
 import { Item } from "@/types/Item";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function ItemCard({ item, position }: { item: Item, position: "first" | "last" | "middle" }) {
+function ItemCard({
+  item,
+  position,
+}: {
+  item: Item;
+  position: "first" | "last" | "middle";
+}) {
   return (
     <div className="item-card w-full relative">
       {position === "first" && (
