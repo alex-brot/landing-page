@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   description: "Offizielle Website von AlexBrot",
   openGraph: {
     type: "website",
-    locale: "de_DE",
+    locale: "de_AT",
     url: env.SITE_URL,
     siteName: "AlexBrot",
     title: "AlexBrot",
