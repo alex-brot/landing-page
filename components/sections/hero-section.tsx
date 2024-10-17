@@ -4,7 +4,6 @@ import { usePrefersReducedMotion } from "@/hooks/prefersReducedMotion";
 import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Image from "next/image";
-import { getCorrectAssetPath } from "@/utils/image";
 
 function HeroSectionParallax({
   fileType = "image",

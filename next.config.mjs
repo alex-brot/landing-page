@@ -11,6 +11,7 @@ const nextConfig = {
   },
   output: "export",
   assetPrefix: "/" + process.env.NEXT_PUBLIC_REPOSITORY_NAME || "",
+  basePath: process.env.NEXT_PUBLIC_REPOSITORY_NAME || "",
 };
 
 export default nextConfig;
