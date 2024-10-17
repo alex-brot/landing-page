@@ -22,7 +22,10 @@ const playfairDisplay = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AlexBrot",
+  title: "AlexBrot | Home",
+  authors: [{
+    name: "Manuel Puchner",
+  }],
   description: "Offizielle Website von AlexBrot",
   openGraph: {
     type: "website",
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
     description: "Offizielle Website von AlexBrot",
     images: [
       {
-        url: `${env.SITE_URL}/assets/og-image.jpg`,
+        url: `${env.SITE_URL}/assets/og-image.png`,
         width: 1200,
         height: 630,
         alt: "AlexBrot",
