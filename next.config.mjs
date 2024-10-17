@@ -6,12 +6,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "picsum.photos",
-      
       },
     ],
   },
   output: "export",
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  assetPrefix: process.env.NEXT_PUBLIC_REPOSITORY_NAME || "",
 };
 
 export default nextConfig;

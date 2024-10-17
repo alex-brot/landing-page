@@ -1,5 +1,5 @@
 const _SHOP_URL = process.env.NEXT_PUBLIC_SHOP_URL;
-const _REPOSITORY_NAME = process.env.REPOSITORY_NAME;
+const _REPOSITORY_NAME = process.env.NEXT_PUBLIC_REPOSITORY_NAME;
 type Env = {
   SHOP_URL: string;
   REPOSITORY_NAME: string;
