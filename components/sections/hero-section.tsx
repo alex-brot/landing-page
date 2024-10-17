@@ -4,6 +4,7 @@ import { usePrefersReducedMotion } from "@/hooks/prefersReducedMotion";
 import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Image from "next/image";
+import { getCorrectAssetPath } from "@/utils/image";
 
 function HeroSectionParallax({
   fileType = "image",
@@ -124,13 +125,17 @@ function HeroSection({
 
   return prefersReducedMotion ? (
     <HeroSectionReducedMotion
-      src={fileType === "image" ? src : (reducedMotionSrc as string)}
+      src={
+        fileType === "image"
+          ? getCorrectAssetPath(src)
+          : getCorrectAssetPath(reducedMotionSrc as string)
+      }
       text={text}
     />
   ) : (
     <HeroSectionParallax
       fileType={fileType}
-      src={src}
+      src={getCorrectAssetPath(src)}
       className={className}
       text={text}
     />

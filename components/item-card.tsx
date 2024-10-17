@@ -3,6 +3,7 @@ import { Item } from "@/types/Item";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { getCorrectAssetPath } from "@/utils/image";
 
 function ItemCard({
   item,
@@ -18,7 +19,7 @@ function ItemCard({
       )}
       <div className="image-wrapper relative  aspect-square m-1">
         <Image
-          src={item.image}
+          src={getCorrectAssetPath(item.image)}
           alt={item.name}
           fill
           className="rounded-lg -z-10"

@@ -1,3 +1,4 @@
+import { getCorrectAssetPath } from "@/utils/image";
 import Image from "next/image";
 
 function PersonCard({
@@ -23,7 +24,7 @@ function PersonCard({
         } aspect-square`}
       >
         <Image
-          src={image}
+          src={getCorrectAssetPath(image)}
           alt={name}
           fill
           style={{ objectFit: "cover" }}
