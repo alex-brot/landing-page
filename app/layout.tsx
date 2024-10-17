@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { env } from "../utils/env";
+import { env } from "@/utils/env";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,9 +23,11 @@ const playfairDisplay = localFont({
 
 export const metadata: Metadata = {
   title: "AlexBrot | Home",
-  authors: [{
-    name: "Manuel Puchner",
-  }],
+  authors: [
+    {
+      name: "Manuel Puchner",
+    },
+  ],
   description: "Offizielle Website von AlexBrot",
   openGraph: {
     type: "website",
@@ -36,13 +38,13 @@ export const metadata: Metadata = {
     description: "Offizielle Website von AlexBrot",
     images: [
       {
-        url: `${env.SITE_URL}/assets/og-image.png`,
+        url: `${env.SITE_URL}/assets/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "AlexBrot",
       },
     ],
-  }
+  },
 };
 
 env.init();
