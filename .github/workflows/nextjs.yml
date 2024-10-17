@@ -76,7 +76,8 @@ jobs:
       - name: test vars
         env:
           NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
-        run: echo $NEXT_PUBLIC_SHOP_URL
+          test: "hello world"
+        run: echo $NEXT_PUBLIC_SHOP_URL && echo $test
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
