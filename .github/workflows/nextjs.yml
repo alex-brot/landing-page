@@ -77,9 +77,13 @@ jobs:
         env:
           NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
         run: echo $NEXT_PUBLIC_SHOP_URL
+      - name: Set ENV variables
+        run: |
+          echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
+          REPOSITORY_NAME: $REPOSITORY_NAME
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
