@@ -4,7 +4,6 @@ import { usePrefersReducedMotion } from "@/hooks/prefersReducedMotion";
 import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Image from "next/image";
-import { getCorrectLocalAssetSrc } from "@/utils/image";
 
 function HeroSectionParallax({
   fileType = "image",
@@ -32,16 +31,13 @@ function HeroSectionParallax({
                     muted
                     className="h-full object-cover absolute "
                   >
-                    <source
-                      src={getCorrectLocalAssetSrc(src)}
-                      type="video/mp4"
-                    />
+                    <source src={src} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 )}
                 {fileType === "image" && (
                   <Image
-                    src={getCorrectLocalAssetSrc(src)}
+                    src={src}
                     alt="heroimage"
                     fill
                     className="h-full aspect-video absolute"
@@ -84,7 +80,7 @@ function HeroSectionReducedMotion({
       <div className="image-wrapper relative w-full">
         <div className="relative h-[38rem]">
           <Image
-            src={getCorrectLocalAssetSrc(src)}
+            src={src}
             alt="heroimage"
             fill
             className="h-full aspect-video absolute"
@@ -93,7 +89,9 @@ function HeroSectionReducedMotion({
         </div>
         <div className="bg-black bg-opacity-40 w-full  h-full absolute top-0 flex items-center">
           <div className="container mt-16">
-            <h1 className="text-primary-light text-7xl">{text}</h1>
+            <h1 className="text-primary-light text-7xl">
+              {text}
+            </h1>
           </div>
         </div>
       </div>
