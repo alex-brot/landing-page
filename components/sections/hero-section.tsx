@@ -127,15 +127,15 @@ function HeroSection({
     <HeroSectionReducedMotion
       src={
         fileType === "image"
-          ? getCorrectAssetPath(src)
-          : getCorrectAssetPath(reducedMotionSrc as string)
+          ? src
+          : reducedMotionSrc as string
       }
       text={text}
     />
   ) : (
     <HeroSectionParallax
       fileType={fileType}
-      src={getCorrectAssetPath(src)}
+      src={src}
       className={className}
       text={text}
     />
