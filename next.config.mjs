@@ -10,7 +10,7 @@ const nextConfig = {
     ],
   },
   output: "export",
-  assetPrefix: process.env.NEXT_PUBLIC_REPOSITORY_NAME || "",
+  assetPrefix: "/" + process.env.NEXT_PUBLIC_REPOSITORY_NAME || "",
 };
 
 export default nextConfig;
