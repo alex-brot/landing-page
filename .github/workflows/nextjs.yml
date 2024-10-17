@@ -75,12 +75,11 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: test vars
         env:
-          NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
-          test: "hello world"
-        run: echo $NEXT_PUBLIC_SHOP_URL && echo $test
+          NEXT_PUBLIC_SHOP_URL: ${{ env.NEXT_PUBLIC_SHOP_URL }}
+        run: echo $NEXT_PUBLIC_SHOP_URL
       - name: Build with Next.js
         env:
-          NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
+          NEXT_PUBLIC_SHOP_URL: ${{ env.NEXT_PUBLIC_SHOP_URL }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
