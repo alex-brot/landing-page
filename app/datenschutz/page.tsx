@@ -26,7 +26,7 @@ export default function Datenschutz() {
             Erklärung zur Informationspflicht{" "}
           </h3>
           <br />{" "}
-          <p align="center">
+          <p className="text-center">
             <strong>Datenschutzerklärung</strong>
           </p>{" "}
           <p>
