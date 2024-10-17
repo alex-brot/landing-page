@@ -78,7 +78,9 @@ jobs:
           NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
           NOVE_ENV: production
           NEXT_PUBLIC_REPOSITORY_NAME: ${{ github.event.repository.name }}
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          NEXT_PUBLIC_SITE_URL=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url') ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
