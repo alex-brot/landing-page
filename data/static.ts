@@ -27,7 +27,7 @@ export const devs: Person[] = [
     image: "/assets/blank-profile-picture.png",
   },
   {
-    name: "Lukas",
+    name: "Michael",
     description:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.",
     image: "/assets/blank-profile-picture.png",
