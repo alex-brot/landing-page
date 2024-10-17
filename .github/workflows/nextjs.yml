@@ -81,7 +81,7 @@ jobs:
           NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
           NEXT_PUBLIC_REPOSITORY_NAME: $REPOSITORY_NAME
         run: |
-          echo $NEXT_PUBLIC_REPOSITORY_NAME
+          echo $GITHUB_ENV
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
