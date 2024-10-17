@@ -83,6 +83,7 @@ jobs:
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_SHOP_URL: ${{ vars.NEXT_PUBLIC_SHOP_URL }}
+          NOVE_ENV: production
           REPOSITORY_NAME: $REPOSITORY_NAME
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
